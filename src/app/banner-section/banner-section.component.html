@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="left">
+      <div class="title">
+        <h1>A plantar soluções para colher desenvolvimento.</h1>
+      </div>
+      <div class="content">
+        <h4>Distribuição de bens de consumo</h4>
+        <p>
+          Somos uma empresa vocacionada ao Comércio e Prestação de Serviços com foco em Agronegócio.
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="images"
+        [ngClass]="
+        {
+          'one': this.numberOfImages == 1,
+          'two': this.numberOfImages == 2,
+          'three': this.numberOfImages == 3,
+          'four': this.numberOfImages == 4,
+          'five': this.numberOfImages == 5
+        }
+        ">
+        <div id="imgs" *ngFor="let images of arrayOfImages" [innerHTML]="images.image"
+        [ngClass]="
+        {
+          'im-first' : images.position == 1,
+          'im-second' : images.position == 2,
+          'im-third' : images.position == 3,
+          'im-fourth' : images.position == 4,
+          'im-fifth' : images.position == 5
+        }"
+        class="im im1">
+          <!-- <img src="assets/images/image1.jpg" alt=""> -->
+        </div>
+      </div>
+      <div class="button">
+        <button class="prev" (click)="prev()"><img src="assets/setas/left.svg" alt=""></button>
+        <button class="next" (click)="next()"><img src="assets/setas/right.svg" alt=""></button>
+      </div>
+    </div>
+</div>

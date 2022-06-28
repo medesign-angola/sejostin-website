@@ -1,0 +1,275 @@
+:root{
+    --primary-image-slide-width: 550px;
+    --secondaries-image-slide-width: 53px;
+    --margin-left-second-image: calc(var(--primary-image-slide-width) + 10px);
+    --margin-left-third-image: calc(var(--margin-left-second-image) + var(--secondaries-image-slide-width) + 7px);
+    --margin-left-fourth-image: calc(var(--margin-left-third-image) + var(--secondaries-image-slide-width) + 7px);
+    --margin-left-fifth-image: calc(var(--margin-left-fourth-image) + var(--secondaries-image-slide-width) + 7px);
+   
+   
+    --images-container-width-one-images: calc(var(--margin-left-second-image) + 7px);
+    --images-container-width-two-images: calc(var(--margin-left-second-image) + 73px);
+    --images-container-width-three-images: calc(var(--margin-left-third-image) + 73px);
+    --images-container-width-four-images: calc(var(--margin-left-fourth-image) + 73px);
+    --images-container-width-five-images: calc(var(--margin-left-fifth-image) + 73px);
+}
+
+.container .title h1{
+    font-weight: 800;
+    font-size: 45px;
+}
+.container{
+    display: flex;
+    /* width: 1440px; */
+    width: 95%;
+    max-width: 1440px;
+    margin: 0px auto;
+    height: 560px;
+    justify-content: space-around;
+    /* background-color: orange; */
+    position: relative;
+    padding: 0px 0px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    /* background-color: aqua; */
+}
+.left .title{
+    margin: 1rem 0rem;
+}
+.left .content h4{
+    margin: 1rem 0rem;
+    font-weight: 900;
+}
+.left .content{
+    font-size: 15px;
+    color: #2d2d2d;
+    width: 85%;
+}
+.container .right{
+    width: 55%;
+    height: calc(100% + 60px);
+    /* background-color: yellow; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container .right .button{
+    /* position: absolute; */
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    padding: 5px 40%;
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.container .right .button button{
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+
+.container .right .images{
+    position: relative;
+    /* padding-left: 5px; */
+    height: 100%;
+    margin: 0px auto;
+    /* display: grid;
+    grid-template-columns: 350px 70px 70px 70px;
+    column-gap: 5px; */
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.container .right .images.one{
+    /* background-color: red; */
+    width: var(--images-container-width-one-images);
+    overflow: hidden;
+}
+
+.container .right .images.two{
+    /* background-color: red; */
+    width: var(--images-container-width-two-images);
+    overflow: hidden;
+}
+
+.container .right .images.three{
+    /* background-color: red; */
+    width: var(--images-container-width-three-images);
+    overflow: hidden;
+}
+
+.container .right .images.four{
+    /* background-color: red; */
+    width: var(--images-container-width-four-images);
+    overflow: hidden;
+}
+
+.container .right .images.five{
+    /* background-color: red; */
+    width: var(--images-container-width-five-images);
+    overflow: hidden;
+}
+
+.container .right .images div.im{
+    /* padding: 100px; */
+    /* background-color: red; */
+    overflow: hidden;
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    /* display: inline-block; */
+    margin: 0px 3px;
+    transition: all 1s ease-in-out;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container .right .images div.im > img{
+    /* margin-left: 10px; */
+    width: var(--primary-image-slide-width) !important;
+    height: 100%;
+    object-fit: cover !important;
+    box-sizing: border-box;
+}
+
+.container .right .images.one .im-first{
+    animation: transitionOneImage 1s ease-in;
+}
+.container .right .images.two .im-first{
+    animation: transitionTwoImages 1s ease-in;
+}
+.container .right .images.three .im-first{
+    animation: transitionThreeImages 1s ease-in;
+}
+.container .right .images.four .im-first{
+    animation: transitionFourImages 1s ease-in;
+}
+.container .right .images.five .im-first{
+    animation: transitionFiveImages 1s ease-in;
+}
+
+.im-first{
+    width: var(--primary-image-slide-width);
+    /* transition: all 1.5s ease-in-out; */
+    /* background-color: red; */
+    position: relative;
+}
+
+@keyframes transitionOneImage {
+    from{
+        margin-left: calc(var(--margin-left-first-image) - 7px);
+        /* opacity: 0; */
+        width: var(--secondaries-image-slide-width) !important;
+    }
+    to{
+        margin-left: 0px;
+        width: var(--primary-image-slide-width) !important;
+        /* background-color: red;
+        padding: 20px; */
+    }
+}
+@keyframes transitionTwoImages {
+    from{
+        margin-left: calc(var(--margin-left-second-image) - 7px);
+        /* opacity: 0; */
+        width: var(--secondaries-image-slide-width) !important;
+    }
+    to{
+        margin-left: 0px;
+        width: var(--primary-image-slide-width) !important;
+        /* background-color: red;
+        padding: 20px; */
+    }
+}
+
+@keyframes transitionThreeImages {
+    from{
+        margin-left: calc(var(--margin-left-third-image) - 7px);
+        /* opacity: 0; */
+        width: var(--secondaries-image-slide-width) !important;
+    }
+    to{
+        margin-left: 0px;
+        width: var(--primary-image-slide-width) !important;
+        /* background-color: red;
+        padding: 20px; */
+    }
+}
+
+@keyframes transitionFourImages {
+    from{
+        margin-left: calc(var(--margin-left-fourth-image) - 7px);
+        /* opacity: 0; */
+        width: var(--secondaries-image-slide-width) !important;
+    }
+    to{
+        margin-left: 0px;
+        width: var(--primary-image-slide-width) !important;
+        /* background-color: red;
+        padding: 20px; */
+    }
+}
+
+@keyframes transitionFiveImages {
+    from{
+        margin-left: calc(var(--margin-left-fifth-image) - 7px);
+        /* opacity: 0; */
+        width: var(--secondaries-image-slide-width) !important;
+    }
+    to{
+        margin-left: 0px;
+        width: var(--primary-image-slide-width) !important;
+        /* background-color: red;
+        padding: 20px; */
+    }
+}
+
+.im-second{
+    margin-left: var(--margin-left-second-image) !important;
+    width: var(--secondaries-image-slide-width);
+    /* transition: all 1.5s ease-in-out; */
+    /* animation: transition 1.5s ease; */
+}
+
+@keyframes second {
+    from{
+        width: var(--primary-image-slide-width);
+    }
+    to{
+        width: 60px !important;
+    }
+}
+
+.im-third{
+    margin-left: var(--margin-left-third-image) !important;
+    width: var(--secondaries-image-slide-width);
+    transition: all 1.5s ease-in-out;
+}
+.im-fourth{
+    margin-left: var(--margin-left-fourth-image) !important;
+    width: var(--secondaries-image-slide-width);
+    transition: all 1.5s ease-in-out;
+}
+.im-fifth{
+    margin-left: var(--margin-left-fifth-image) !important;
+    width: var(--secondaries-image-slide-width);
+    transition: all 1.5s ease-in-out;
+}
+
+
+/* .container .right .images img:hover{
+    width: auto;
+} */
