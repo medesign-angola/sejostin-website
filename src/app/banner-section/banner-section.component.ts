@@ -12,11 +12,11 @@ export class BannerSectionComponent implements OnInit {
   imageObject: any = {};
   arrayOfImages: any[] = [];
 
-  image1: string = `<img src="assets/banner-images/image1.jpg" alt="">`;
-  image2: string = `<img src="assets/banner-images/image2.jpg" alt="">`;
-  image3: string = `<img src="assets/banner-images/image3.jpg" alt="">`;
-  image4: string = `<img src="assets/banner-images/image4.jpg" alt="">`;
-  image5: string = `<img src="assets/banner-images/image5.jpg" alt="">`;
+  image1: string = `<img src="assets/banner-images/test/image1.jpg" alt="">`;
+  image2: string = `<img src="assets/banner-images/test/image2.jpg" alt="">`;
+  image3: string = `<img src="assets/banner-images/test/image3.jpg" alt="">`;
+  image4: string = `<img src="assets/banner-images/test/image4.jpg" alt="">`;
+  image5: string = `<img src="assets/banner-images/test/image5.jpg" alt="">`;
   
   isFirst: boolean = false;
 

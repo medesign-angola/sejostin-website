@@ -1,0 +1,65 @@
+.contain{
+    width: 95%;
+    max-width: 1440px;
+    margin: 60px auto 0px auto;
+    position: relative;
+    /* background-color: red; */
+}
+.left-content{
+    width: 50%;
+}
+.left-content .content{
+    border-right: 1px solid rgba(2, 126, 69, .2);
+    /* border-right: 1px solid var(--secondary-color); */
+}
+
+.main-title-content{}
+.main-title-content h1{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.subtitle-content{}
+.subtitle-content h4{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.paragraph-content{
+    /* background-color: red; */
+    width: 87%;
+}
+.paragraph-content p{
+    opacity: 75%;
+}
+.section-title{}
+.section-title h3{
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 140px;
+    position: relative;
+    /* background-color: red; */
+}
+.section-title h3::before{
+    content: '';
+    position: absolute;
+    left: -135px;
+    background-color: var(--secondary-color);
+    width: 125px;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right-content{
+    width: 50%;
+}
+.right-content .mission{
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 100%;
+}
+.right-content .mission .mission-card{
+    width: 75%;
+    margin: 0px auto;
+}
+

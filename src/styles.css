@@ -4,10 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
 :root{
     --primary-color: #157DA1;
     --secondary-color: #027E45;
     --accent-color: #28ABE3;
+}
+html{
+    scroll-behavior: smooth;
 }
