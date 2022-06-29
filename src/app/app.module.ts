@@ -7,6 +7,7 @@ import { SecondSectionComponent } from './second-section/second-section.componen
 import { AboutUsComponent } from './about-us/about-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CeoMessageComponent } from './ceo-message/ceo-message.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     BannerSectionComponent,
     SecondSectionComponent,
     AboutUsComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    CeoMessageComponent
   ],
   imports: [
     BrowserModule,
