@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { BannerSectionComponent } from './banner-section/banner-section.component';
 import { SecondSectionComponent } from './second-section/second-section.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerSectionComponent,
     SecondSectionComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    OurServicesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

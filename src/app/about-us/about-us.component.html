@@ -1,5 +1,5 @@
 <div class="contain flex justify-between">
-    <div class="left-content bg-orange-300">
+    <div class="left-content">
         <div class="section-title">
             <h3 class="text-secondary my-5">QUEM SOMOS</h3>
         </div>
@@ -20,24 +20,64 @@
             </div>
         </div>
     </div>
-    <div class="right-content bg-orange-100 flex items-center justify-center flex-col">
-        <div class="mission">
-            <div class="mission-card bg-white flex p-10">
-                <div class="mission-left">
-                    <img src="assets/icones/mission.svg" width="25px" alt="">
+    <div class="right-content flex items-center justify-center flex-col">
+        <div class="mission mb-5">
+            <div class="mission-card bg-white flex p-8">
+                <div class="mission-left my-3">
+                    <img src="assets/icones/mission.svg" width="60px" alt="">
                 </div>
                 <div class="mission-right">
-                    <div class="description-title">
+                    <div class="description-title my-3">
                         <h4>Missão</h4>
                     </div>
                     <div class="description-content">
-                        texto
+                        <p>
+                            Contribuir para um país mais forte por meio da transformação
+                             do conhecimento em Riqueza para as pessoas.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="vision_values">
-            Visão e Valores
+        <div class="description-slide">
+            <div class="vision" [ngClass]="{'is-not-first' : !this.vision}">
+                <div class="vision-card bg-white flex p-8">
+                    <div class="vision-left my-3">
+                        <img src="assets/icones/mission.svg" width="100px" alt="">
+                    </div>
+                    <div class="vision-right">
+                        <div class="description-title my-3">
+                            <h4>Visão</h4>
+                        </div>
+                        <div class="description-content">
+                            <p>
+                                Ser a maior e melhor empresa no ramo do agronegócio, oferecendo aos seus clientes e parceiros uma relação duradoura, com foco no crescimento, rentabilidade e responsabilidade socioambiental.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="values" [ngClass]="{'is-first' : this.values}">
+                <div class="values-card bg-white flex p-8">
+                    <div class="values-left my-3">
+                        <img src="assets/icones/mission.svg" width="60px" alt="">
+                    </div>
+                    <div class="values-right">
+                        <div class="description-title my-3">
+                            <h4>Valores</h4>
+                        </div>
+                        <div class="description-content mb-12">
+                            <p>
+                                Inovação, Liderança, Responsabilidade, Integridade, Paixão, Colaboração, Diversidade, Qualidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-controllers mt-2">
+            <a href="javascript:void(0)" (click)="makeVisionFirst()" class="text-secondary text-2xl" [innerHTML]="this.visionButton"></a>
+            <a href="javascript:void(0)" (click)="makeValueFirst()" class="text-secondary text-2xl" [innerHTML]="this.valuesButton"></a>
         </div>
     </div>
 </div>

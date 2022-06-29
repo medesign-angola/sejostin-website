@@ -1,0 +1,186 @@
+.contain{
+    width: 95%;
+    max-width: 1440px;
+    margin: 60px auto 0px auto;
+    position: relative;
+    /* background-color: red; */
+}
+.left-content{
+    width: 50%;
+}
+.left-content .content{
+}
+
+.main-title-content{
+    width: 95%;
+}
+.main-title-content h1{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.subtitle-content{}
+.subtitle-content h4{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.paragraph-content{
+    /* background-color: red; */
+    width: 87%;
+}
+.paragraph-content p{
+    opacity: 75%;
+}
+.section-title{}
+.section-title h3{
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 140px;
+    position: relative;
+    /* background-color: red; */
+}
+.section-title h3::before{
+    content: '';
+    position: absolute;
+    left: -140px;
+    background-color: var(--secondary-color);
+    width: 125px;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right-content{
+    width: 50%;
+    /* background-color: orange; */
+}
+
+.description-slide{
+    /* background-color: red; */
+    height: 100%;
+    width: 92%;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+    /* box-shadow: 0px 10px 50px #eee; */
+}
+
+
+.right-content .firstBlock{
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 100%;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    position: absolute;
+    transition: .6s;
+}
+.right-content .firstBlock .firstBlock-card{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.firstBlock-images-container{
+    position: relative;
+    height: 100%;
+}
+.firstBlock-images-container div.box{
+    width: calc(380px - 70px);
+    height: calc(500px - 100px);
+    /* height: 100%; */
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+
+.firstBlock-images-container div.box .description{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(40, 171, 227, .3 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstBlock-images-container div.box .description h2{
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.firstBlock-images-container div.box image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.right-content .secondBlock{
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 100%;
+    top: 0;
+    left: 110%;
+    height: 100%;
+    position: absolute;
+    transition: .6s;
+}
+
+.right-content .secondBlock.is-first{
+    left: 0%;
+}
+.right-content .firstBlock.is-not-first{
+    left: -110%;
+}
+
+.right-content .secondBlock .secondBlock-card{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.secondBlock-images-container{
+    position: relative;
+    height: 100%;
+}
+.secondBlock-images-container div.box{
+    width: calc(380px - 70px);
+    height: calc(500px - 100px);
+    /* height: 100%; */
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+.secondBlock-images-container div.box image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.secondBlock-images-container div.box .description{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(40, 171, 227, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secondBlock-images-container div.box .description h2{
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}

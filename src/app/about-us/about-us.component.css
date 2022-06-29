@@ -43,7 +43,7 @@
 .section-title h3::before{
     content: '';
     position: absolute;
-    left: -135px;
+    left: -140px;
     background-color: var(--secondary-color);
     width: 125px;
     height: 5px;
@@ -53,13 +53,101 @@
 .right-content{
     width: 50%;
 }
+
 .right-content .mission{
     /* padding: 10px; */
     /* background-color: aqua; */
     width: 100%;
 }
 .right-content .mission .mission-card{
-    width: 75%;
+    width: 85%;
+    margin: 0px auto;
+    box-shadow: 0px 10px 50px #eee;
+}
+
+.mission-right{
+    margin-left: 20px;
+}
+.mission-right .description-title{}
+.mission-right .description-title h4{
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mission-right .description-content{}
+.mission-right .description-content p{}
+
+
+.description-slide{
+    /* background-color: red; */
+    height: 200px;
+    width: 85%;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 10px 50px #eee;
+}
+
+
+.right-content .vision{
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 100%;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    position: absolute;
+    transition: .6s;
+}
+.right-content .vision .vision-card{
+    width: 100%;
     margin: 0px auto;
 }
 
+.vision-right{
+    margin-left: 20px;
+}
+.vision-right .description-title{}
+.vision-right .description-title h4{
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vision-right .description-content{}
+.vision-right .description-content p{}
+
+.right-content .values{
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    height: 100%;
+    transition: .6s;
+}
+.right-content .values.is-first{
+    left: 0%;
+}
+.right-content .vision.is-not-first{
+    left: -110%;
+}
+.right-content .values .values-card{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.values-right{
+    margin-left: 20px;
+}
+.values-right .description-title{}
+.values-right .description-title h4{
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.values-right .description-content{}
+.values-right .description-content p{}
