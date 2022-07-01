@@ -7,10 +7,10 @@
     </div>
     <div class="menu">
       <ul>
-        <li><a href="#" class="active">Página Inicial</a></li>
-        <li><a routerLink="about-us" routerLinkActive="active">Quem Somos</a></li>
-        <li><a href="#">Nossos Serviços</a></li>
-        <li><a href="#">Mensagem do CEO</a></li>
+        <li><a (click)="scrollTo(banner)" [ngClass]="{'active' : this.currentSection === 1}">Página Inicial</a></li>
+        <li><a (click)="scrollTo(about)" [ngClass]="{'active' : this.currentSection === 2}">Quem Somos</a></li>
+        <li><a (click)="scrollTo(services)" [ngClass]="{'active' : this.currentSection === 3}">Nossos Serviços</a></li>
+        <li><a (click)="scrollTo(message)" [ngClass]="{'active' : this.currentSection === 4}">Mensagem do CEO</a></li>
       </ul>
     </div>
     <div class="contact-service-btn">
@@ -18,8 +18,16 @@
     </div>
   </nav>
 </header>
-<app-banner-section></app-banner-section>
-<app-second-section></app-second-section>
-<app-about-us id="about-us"></app-about-us>
-<app-our-services></app-our-services>
-<app-ceo-message></app-ceo-message>
+<div #banner>
+  <app-banner-section></app-banner-section>
+  <app-second-section></app-second-section>
+</div>
+<div #about>
+  <app-about-us id="about-us"></app-about-us>
+</div>
+<div #services>
+  <app-our-services></app-our-services>
+</div>
+<div #message>
+  <app-ceo-message></app-ceo-message>
+</div>
