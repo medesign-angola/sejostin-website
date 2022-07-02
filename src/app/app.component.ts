@@ -5,40 +5,46 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild }
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit{
+export class AppComponent implements AfterViewInit{
   // title = 'sejostin-website';
   @ViewChild('banner') banner!: ElementRef
   @ViewChild('about') about!: ElementRef
   @ViewChild('services') services!: ElementRef
   @ViewChild('message') message!: ElementRef
 
-  currentSection: Number = 0;
+  currentSection: Number = 1;
 
-  public bannerOffset: any = null;
-  public aboutOffset: any = null;
-  public servicesOffset: any = null;
-  public messageOffset: any = null;
-
-  ngOnInit(): void{
-    // this.checkOffsetTop();
-  }
+  public bannerOffset: number = 0;
+  public aboutOffset: number = 965;
+  public servicesOffset: number = 1516;
+  public messageOffset: number = 2034;
 
   ngAfterViewInit(): void {
+
+    // this.bannerOffset = this.banner.nativeElement.offsetTop - 90;
+    // this.aboutOffset = this.about.nativeElement.offsetTop - 90;
+    // this.servicesOffset = this.services.nativeElement.offsetTop - 90;
+    // this.messageOffset = this.message.nativeElement.offsetTop - 90;
+
     
-    this.bannerOffset = this.banner.nativeElement.offsetTop;
-    this.aboutOffset = this.about.nativeElement.offsetTop;
-    this.servicesOffset = this.services.nativeElement.offsetTop;
-    this.messageOffset = this.message.nativeElement.offsetTop;
+    this.bannerOffset = this.bannerOffset - 90;
+    this.aboutOffset = this.aboutOffset - 90;
+    this.servicesOffset = this.servicesOffset - 90;
+    this.messageOffset = this.messageOffset - 90;
 
   }
 
-  @HostListener('window.scroll', ['$event'])
+  @HostListener('window:scroll', ['$event'])
 
   checkOffsetTop(){
     
     // console.log(window.pageYOffset);
 
-    if(window.pageYOffset >= this.bannerOffset && window.pageYOffset < this.aboutOffset){
+    // console.log(this.messageOffset);
+
+    // console.log(this.currentSection);
+
+    if(window.pageYOffset >= 0 && window.pageYOffset < this.aboutOffset){
       this.currentSection = 1;
     }else if(window.pageYOffset >= this.aboutOffset && window.pageYOffset < this.servicesOffset){
       this.currentSection = 2;
@@ -47,14 +53,15 @@ export class AppComponent implements OnInit, AfterViewInit{
     }else if(window.pageYOffset >= this.messageOffset){
       this.currentSection = 4;
     }else{
-      this.currentSection = 0;
+      this.currentSection = 1;
     }
 
   }
 
   scrollTo(element: HTMLElement){
-    element.scrollIntoView();
-    this.checkOffsetTop();
+    // element.scrollIntoView();
+    scrollTo(0, element.offsetTop - 90)
+    // console.log(element.offsetTop);
   }
 
 

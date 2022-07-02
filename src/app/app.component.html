@@ -1,0 +1,73 @@
+<header>
+    <nav class="contain">
+      <div class="logotype">
+        <a href="">
+          <img src="assets/logo/logo.svg" alt="">
+        </a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a (click)="scrollTo(banner)" [ngClass]="
+            {
+                'active' : this.currentSection == 1
+            }
+            ">Página Inicial</a></li>
+          <li><a (click)="scrollTo(about)" [ngClass]="
+            {
+                'active' : this.currentSection == 2
+            }
+            ">Quem Somos</a></li>
+          <li><a (click)="scrollTo(services)" [ngClass]="
+            {
+                'active' : this.currentSection == 3
+            }
+            ">Nossos Serviços</a></li>
+          <li><a (click)="scrollTo(message)" [ngClass]="
+            {
+                'active' : this.currentSection == 4
+            }
+            ">Mensagem do CEO</a></li>
+        </ul>
+      </div>
+      <div class="contact-service-btn">
+        <a href="#">Contactar Serviços</a>
+      </div>
+    </nav>
+  </header>
+
+  <div #banner class="bg-orange-0 py-5 banner">
+    <app-banner-section></app-banner-section>
+    <app-second-section></app-second-section>
+  </div>
+  <div #about class="bg-orange-0 py-5 about">
+    <app-about-us id="about-us"></app-about-us>
+  </div>
+  <div #services class="bg-orange-0 py-5 services">
+    <app-our-services></app-our-services>
+  </div>
+  <div #message class="bg-orange-0 py-5 message">
+    <app-ceo-message></app-ceo-message>
+  </div>
+
+  <footer class="bg-primary">
+    <div class="contain flex justify-between">
+      <div class="content-left flex justify-center items-center m-10 m-20">
+        <div class="brand mr-5">
+          <img src="assets/logo/white-brand.svg" alt="">
+        </div>
+        <div class="text-white font-light">
+          <p>Telefone: 931 96 41 04 | 923 82 68 68</p>
+          <p>E-mail: geral@sejostin.com</p>
+        </div>
+      </div>
+      <div class="content-right flex justify-center items-center pr-5">
+        <div class="text mx-2">
+            <p class="font-bold text-white">Redes Sociais</p>
+        </div>
+        <div class="icons flex justify-center items-center">
+            <a href=""><img src="assets/icones/facebook.svg" class="mx-2" alt=""></a>
+            <a href=""><img src="assets/icones/instagram.svg" class="mx-2" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </footer>
