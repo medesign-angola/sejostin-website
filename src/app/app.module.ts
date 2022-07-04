@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CeoMessageComponent } from './ceo-message/ceo-message.component';
 import { BannerMobileComponent } from './banner-mobile/banner-mobile.component';
 import { AboutMobileComponent } from './about-mobile/about-mobile.component';
+import { OurServicesMobileComponent } from './our-services-mobile/our-services-mobile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutMobileComponent } from './about-mobile/about-mobile.component';
     OurServicesComponent,
     CeoMessageComponent,
     BannerMobileComponent,
-    AboutMobileComponent
+    AboutMobileComponent,
+    OurServicesMobileComponent
   ],
   imports: [
     BrowserModule,

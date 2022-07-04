@@ -1,9 +1,9 @@
-<div class="contain flex sm:flex-col lg:justify-between">
+<div class="contain flex flex-col">
     <div class="left-content">
         <div class="section-title">
-            <h3 class="text-secondary my-5">QUEM SOMOS</h3>
+            <h3 class="text-secondary my-5"><span>QUEM SOMOS</span></h3>
         </div>
-        <div class="content">
+        <div class="content my-10">
             <div class="main-title-content my-5">
                 <h1>Refletimos a visão dos fundadores de que devemos lutar bravamente pelo que desejamos.</h1>
             </div>
@@ -20,33 +20,27 @@
             </div>
         </div>
     </div>
-    <!-- <div class="right-content flex items-center justify-center flex-col">
-        <div class="mission mb-5">
-            <div class="mission-card bg-white flex p-8">
-                <div class="mission-left my-3">
-                    <img src="assets/icones/mission.svg" width="60px" alt="">
-                </div>
-                <div class="mission-right">
-                    <div class="description-title my-3">
-                        <h4>Missão</h4>
-                    </div>
-                    <div class="description-content">
-                        <p>
-                            Contribuir para um país mais forte por meio da transformação
-                             do conhecimento em Riqueza para as pessoas.
-                        </p>
+    <div class="scroller contain-boxes overflow-x-auto" #scroller>
+        <div class="flex items-center pl-3 justify-between flex-row w-[1000px]">
+            <div class="mission" #mission>
+                <div class="mission-card bg-white flex p-8">
+                    <div class="mission-right">
+                        <div class="description-title my-2">
+                            <h4>Missão</h4>
+                        </div>
+                        <div class="description-content">
+                            <p>
+                                Contribuir para um país mais forte por meio da transformação
+                                 do conhecimento em Riqueza para as pessoas.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="description-slide">
-            <div class="vision">
+            <div class="vision" #vision>
                 <div class="vision-card bg-white flex p-8">
-                    <div class="vision-left my-3">
-                        <img src="assets/icones/vision.svg" width="100px" alt="">
-                    </div>
                     <div class="vision-right">
-                        <div class="description-title my-3">
+                        <div class="description-title my-2">
                             <h4>Visão</h4>
                         </div>
                         <div class="description-content">
@@ -57,16 +51,13 @@
                     </div>
                 </div>
             </div>
-            <div class="values">
+            <div class="values" #values>
                 <div class="values-card bg-white flex p-8">
-                    <div class="values-left my-3">
-                        <img src="assets/icones/values.svg" width="60px" alt="">
-                    </div>
                     <div class="values-right">
-                        <div class="description-title my-3">
+                        <div class="description-title my-2">
                             <h4>Valores</h4>
                         </div>
-                        <div class="description-content mb-12">
+                        <div class="description-content">
                             <p>
                                 Inovação, Liderança, Responsabilidade, Integridade, Paixão, Colaboração, Diversidade, Qualidade.
                             </p>
@@ -75,9 +66,10 @@
                 </div>
             </div>
         </div>
-        <div class="slide-controllers mt-2">
-            <a href="javascript:void(0)" class="text-secondary text-2xl" [innerHTML]="this.visionButton"></a>
-            <a href="javascript:void(0)" class="text-secondary text-2xl" [innerHTML]="this.valuesButton"></a>
-        </div>
-    </div> -->
+    </div>
+    <div class="slide-controllers mt-0 text-center">
+        <a href="javascript:void(0)" (click)="this.scrollTo(mission)" class="text-secondary text-2xl" [innerHTML]="this.missionButton"></a>
+        <a href="javascript:void(0)" (click)="this.scrollTo(vision)" class="text-secondary text-2xl" [innerHTML]="this.visionButton"></a>
+        <a href="javascript:void(0)" (click)="this.scrollTo(values)" class="text-secondary text-2xl" [innerHTML]="this.valuesButton"></a>
+    </div>
 </div>

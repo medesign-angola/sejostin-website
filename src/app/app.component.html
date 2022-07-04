@@ -77,10 +77,11 @@
     <app-about-mobile class="sm:block lg:hidden"></app-about-mobile>
     <app-about-us id="about-us" class="sm:hidden lg:block"></app-about-us>
   </div>
-  <div #services class="bg-orange-0 py-5 services sm:hidden">
-    <app-our-services></app-our-services>
+  <div #services class="bg-orange-0 py-5 services">
+    <app-our-services class="sm:hidden lg:block"></app-our-services>
+    <app-our-services-mobile class="sm:block lg:hidden"></app-our-services-mobile>
   </div>
-  <div #message class="bg-orange-0 py-5 message sm:hidden">
+  <div #message class="bg-orange-0 py-5 message">
     <app-ceo-message></app-ceo-message>
   </div>
 
