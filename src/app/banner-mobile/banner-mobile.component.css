@@ -1,0 +1,50 @@
+.container .title h1{
+    font-weight: 800;
+    font-size: 26px;
+}
+.container{
+    display: flex;
+    /* width: 1440px; */
+    width: 90%;
+    max-width: 1440px;
+    margin: 7rem auto 0px auto;
+    /* background-color: orange; */
+    position: relative;
+    padding: 0px 0px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* background-color: aqua; */
+}
+.left .title{
+    margin: 1rem 0rem;
+}
+.left .content h4{
+    margin: 1rem 0rem;
+    font-weight: 900;
+    font-size: 14px;
+}
+.left .content{
+    /* font-size: 18px; */
+    color: #2d2d2d;
+    width: 100%;
+}
+.left .content p{
+    font-size: 13px;
+}
+
+.container .contact-service-btn{
+    width: 100%;
+    text-align: center;
+}
+.container .contact-service-btn a{
+    text-decoration: none;
+    padding: 12px 22px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+}

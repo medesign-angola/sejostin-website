@@ -3,7 +3,7 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild }
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css', './app.component.resp.css']
 })
 export class AppComponent implements AfterViewInit{
   // title = 'sejostin-website';
@@ -18,6 +18,11 @@ export class AppComponent implements AfterViewInit{
   public aboutOffset: number = 965;
   public servicesOffset: number = 1516;
   public messageOffset: number = 2034;
+
+
+  // Menu
+
+  isMenuOpen: boolean = false;
 
   ngAfterViewInit(): void {
 
@@ -62,6 +67,10 @@ export class AppComponent implements AfterViewInit{
     // element.scrollIntoView();
     scrollTo(0, element.offsetTop - 90)
     // console.log(element.offsetTop);
+  }
+
+  changeStatus(){
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 

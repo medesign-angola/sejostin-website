@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { BannerContentService } from '../shared/service/banner-content.service';
 
 @Component({
   selector: 'app-banner-section',
@@ -7,6 +8,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class BannerSectionComponent implements OnInit {
+
+  constructor(private contentService: BannerContentService){}
+
+  title: string = this.contentService.getBannerTitle();
+  subtitle: string = this.contentService.getBannerSubtitle();
+  content: string = this.contentService.getBannerContent();
 
   numberOfImages: number = 5;
   imageObject: any = {};

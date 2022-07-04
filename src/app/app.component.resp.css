@@ -1,0 +1,55 @@
+.menu-mobile-hamburger.open{
+
+}
+.menu-mobile-hamburger.close{
+
+}
+.menu-mobile-hamburger.close span.hamburger-center{
+    display: none;
+}
+.menu-mobile-hamburger.close span.hamburger-top::after{
+    transform: rotate(45deg);
+    transition: .3s ease-in-out;
+}
+.menu-mobile-hamburger.close span.hamburger-bottom::after{
+    transform: rotate(-45deg);
+    transition: .3s ease-in-out;
+}
+.menu-mobile-hamburger{
+    /* background-color: red; */
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    z-index: 100;
+}
+.menu-mobile-hamburger.open span{
+    width: 100%;
+}
+.menu-mobile-hamburger span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transition: .3s ease-in-out;
+    height: 4px;
+    left: 0;
+    background-color: #000;
+}
+
+.menu-mobile-hamburger.open span.hamburger-top::after{
+    top: 0;
+}
+.menu-mobile-hamburger.open span.hamburger-center::after{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-mobile-hamburger.open span.hamburger-bottom::after{
+    bottom: 0;
+}
+
+.hamburger-top{
+}
+.hamburger-center{
+    margin: 15px 0px;
+}
+.hamburger-bottom{
+}

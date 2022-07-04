@@ -1,20 +1,21 @@
 .contain{
-    width: 95%;
+    width: 95% !important;
     max-width: 1440px;
     margin: 0px auto 0px auto;
     /* background-color: red; */
 }
+
 .title h4{
     font-weight: 800;
     padding: 10px 0px;
     /* background-color: aqua; */
-    width: 370px;
+    /* width: 370px; */
     font-size: 20px;
 }
-.boxes{
+.contain-boxes .boxes{
     /* background-color: antiquewhite; */
 }
-.boxes .box{
+.contain-boxes .boxes .box{
     overflow: hidden;
     border-radius: 5px;
     width: 275px;
@@ -23,8 +24,18 @@
     /* background-color: yellow; */
     /* padding: 10px; */
 }
-.boxes .box img{
+.contain-boxes .boxes .box img{
     width: 100%;
     height: 100%;
     /* object-fit: cover; */
+}
+
+
+@media screen and (min-width: 350px) {
+    .contain{
+        width: 90%;
+    }
+    .title h4{
+        font-size: 18px;
+    }
 }

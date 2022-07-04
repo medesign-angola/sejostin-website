@@ -8,6 +8,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CeoMessageComponent } from './ceo-message/ceo-message.component';
+import { BannerMobileComponent } from './banner-mobile/banner-mobile.component';
+import { AboutMobileComponent } from './about-mobile/about-mobile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CeoMessageComponent } from './ceo-message/ceo-message.component';
     SecondSectionComponent,
     AboutUsComponent,
     OurServicesComponent,
-    CeoMessageComponent
+    CeoMessageComponent,
+    BannerMobileComponent,
+    AboutMobileComponent
   ],
   imports: [
     BrowserModule,

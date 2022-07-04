@@ -2,10 +2,11 @@
     <nav class="contain">
       <div class="logotype">
         <a href="">
-          <img src="assets/logo/logo.svg" alt="">
+          <img src="assets/logo/logo.svg" class="hidden md:block" alt="">
+          <img src="assets/logo/brand-mobile.svg" class="md:hidden" alt="">
         </a>
       </div>
-      <div class="menu">
+      <div class="menu hidden lg:block">
         <ul>
           <li><a (click)="scrollTo(banner)" [ngClass]="
             {
@@ -19,7 +20,7 @@
             ">Quem Somos</a></li>
           <li><a (click)="scrollTo(services)" [ngClass]="
             {
-                'active' : this.currentSection == 3
+                'active' : this.currentSection == 3 
             }
             ">Nossos Serviços</a></li>
           <li><a (click)="scrollTo(message)" [ngClass]="
@@ -29,45 +30,80 @@
             ">Mensagem do CEO</a></li>
         </ul>
       </div>
-      <div class="contact-service-btn">
+
+      <div class="menu-mobile hidden sm:block lg:hidden relative" [ngClass]="{'shown': this.isMenuOpen == true, 'hidden': this.isMenuOpen == false}">
+        <ul class="">
+          <li><a (click)="scrollTo(banner)" [ngClass]="
+            {
+                'active' : this.currentSection == 1
+            }
+            ">Página Inicial</a></li>
+          <li><a (click)="scrollTo(about)" [ngClass]="
+            {
+                'active' : this.currentSection == 2
+            }
+            ">Quem Somos</a></li>
+          <li><a (click)="scrollTo(services)" [ngClass]="
+            {
+                'active' : this.currentSection == 3 
+            }
+            ">Nossos Serviços</a></li>
+          <li><a (click)="scrollTo(message)" [ngClass]="
+            {
+                'active' : this.currentSection == 4
+            }
+            ">Mensagem do CEO</a></li>
+        </ul>
+      </div>
+      
+      <div class="menu-mobile-hamburger lg:hidden flex flex-col" (click)="changeStatus()" [ngClass]="{'open': this.isMenuOpen == false, 'close': this.isMenuOpen == true}">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-center"></span>
+        <span class="hamburger-bottom"></span>
+      </div>
+
+      <div class="contact-service-btn hidden lg:block">
         <a href="#">Contactar Serviços</a>
       </div>
     </nav>
   </header>
 
-  <div #banner class="bg-orange-0 py-5 banner">
-    <app-banner-section></app-banner-section>
+  <div #banner class="bg-orange-0 banner">
+    <app-banner-section class="sm:hidden lg:block"></app-banner-section>
+    <app-banner-mobile class="sm:block lg:hidden"></app-banner-mobile>
     <app-second-section></app-second-section>
   </div>
   <div #about class="bg-orange-0 py-5 about">
-    <app-about-us id="about-us"></app-about-us>
+    <app-about-mobile class="sm:block lg:hidden"></app-about-mobile>
+    <app-about-us id="about-us" class="sm:hidden lg:block"></app-about-us>
   </div>
-  <div #services class="bg-orange-0 py-5 services">
+  <div #services class="bg-orange-0 py-5 services sm:hidden">
     <app-our-services></app-our-services>
   </div>
-  <div #message class="bg-orange-0 py-5 message">
+  <div #message class="bg-orange-0 py-5 message sm:hidden">
     <app-ceo-message></app-ceo-message>
   </div>
 
-  <footer class="bg-primary">
-    <div class="contain flex justify-between">
-      <div class="content-left flex justify-center items-center m-10 m-20">
-        <div class="brand mr-5">
+  <footer class="bg-primary py-3 w-[100%]">
+    <div class="contain flex sm:py-5 md:py-5 sm:flex-col md:flex-row md:justify-between">
+      <div class="content-left flex sm:flex-col md:flex-row justify-center items-center md:m-0 sm:mt-0 sm:mb-10">
+        <div class="brand sm:my-6 md:mr-5">
           <img src="assets/logo/white-brand.svg" alt="">
         </div>
-        <div class="text-white font-light">
-          <p>Telefone: 931 96 41 04 | 923 82 68 68</p>
-          <p>E-mail: geral@sejostin.com</p>
+        <div class="text-white sm:text-center md:text-left font-light">
+          <p class="sm:text-[14px]"><strong>Telefone: </strong> 931 96 41 04 | 923 82 68 68</p>
+          <p><strong>E-mail: </strong> geral@sejostin.com</p>
         </div>
       </div>
-      <div class="content-right flex justify-center items-center pr-5">
+      <div class="content-right flex sm:flex-col md:flex-row justify-center items-center md:pr-5">
         <div class="text mx-2">
             <p class="font-bold text-white">Redes Sociais</p>
         </div>
-        <div class="icons flex justify-center items-center">
+        <div class="icons flex justify-center items-center sm:my-2">
             <a href=""><img src="assets/icones/facebook.svg" class="mx-2" alt=""></a>
             <a href=""><img src="assets/icones/instagram.svg" class="mx-2" alt=""></a>
         </div>
       </div>
     </div>
+    <p class="text-center text-white sm:text-[12px]">Sejostin - 2022 &copy; Todos os direitos reservados</p>
   </footer>

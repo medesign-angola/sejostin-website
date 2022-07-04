@@ -1,4 +1,5 @@
 header{
+    /* background-color: #fc0; */
     background-color: #fff;
     position: fixed;
     width: 100%;
@@ -49,6 +50,53 @@ header .contain .contact-service-btn a{
     background-color: var(--primary-color);
     border-radius: 5px;
     text-transform: uppercase;
+}
+
+
+/* Mobile */
+
+header .contain .menu-mobile{
+    position: absolute;
+    left: 0;
+    top: -150%;
+    width: 100%;
+    background-color: #fff;
+    transition: .3s;
+    opacity: 0;
+    height: 50vh;
+}
+
+header .contain .menu-mobile.shown{
+    top: 100%;
+    opacity: 1;
+}
+
+header .contain .menu-mobile.hidden{
+    top: -150%;
+}
+
+header .contain .menu-mobile ul{
+    list-style: none;
+    width: 95%;
+    margin: 0px auto;
+}
+header .contain .menu-mobile ul li{
+    display: block;
+    margin: 5px 0px;
+}
+header .contain .menu-mobile ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    display: block;
+}
+header .contain .menu-mobile ul li a.active{
+    color: var(--primary-color) !important;
+}
+header .contain .menu-mobile ul li a:hover{
+    color: var(--primary-color);
 }
 
 footer .contain{
