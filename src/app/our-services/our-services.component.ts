@@ -41,6 +41,9 @@ export class OurServicesComponent implements OnInit {
 
   }
 
+  next(){}
+  prev(){}
+
   ngOnInit(): void {
     
   }

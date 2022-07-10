@@ -121,6 +121,15 @@
     object-fit: cover;
 }
 
+.right-content{
+    /* background-color: red; */
+    position: relative;
+}
+
+.right-content .left-arrow{}
+
+.right-content .right-arrow{}
+
 
 .right-content .secondBlock{
     /* padding: 10px; */
