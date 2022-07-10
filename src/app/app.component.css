@@ -15,12 +15,17 @@ header nav{
 header > .contain{
     max-width: 1440px;
     /* background-color: orange; */
-    width: 95%;
+    /* width: 95%; */
     margin: 0px auto;
+    z-index: 2;
     /* background-color: #fc0; */
 }
-header .contain .logoype{}
-header .contain .menu{}
+header .contain .logoype{
+    z-index: 2;
+}
+header .contain .menu{
+    z-index: 2;
+}
 header .contain .menu ul{
     list-style: none;
 }
@@ -58,12 +63,14 @@ header .contain .contact-service-btn a{
 header .contain .menu-mobile{
     position: absolute;
     left: 0;
-    top: -150%;
+    /* top: -150%; */
     width: 100%;
+    margin: 0px auto;
     background-color: #fff;
-    transition: .3s;
+    transition: all .6s;
     opacity: 0;
-    height: 50vh;
+    z-index: -1;
+    height: 35vh;
 }
 
 header .contain .menu-mobile.shown{
@@ -77,8 +84,9 @@ header .contain .menu-mobile.hidden{
 
 header .contain .menu-mobile ul{
     list-style: none;
-    width: 95%;
+    /* background-color: red; */
     margin: 0px auto;
+    width: 90%;
 }
 header .contain .menu-mobile ul li{
     display: block;

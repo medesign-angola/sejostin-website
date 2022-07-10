@@ -54,8 +54,8 @@
             </div>
         </div>
         <div class="slide-controllers mt-2">
-            <a href="javascript:void(0)" (click)="makeFirstBlockFirst()" class="text-secondary text-2xl" [innerHTML]="this.firstBlockButton"></a>
-            <a href="javascript:void(0)" (click)="makeSecondBlockFirst()" class="text-secondary text-2xl" [innerHTML]="this.secondBlockButton"></a>
+            <a href="javascript:void(0)" (click)="makeFirstBlockFirst()" class="text-2xl" [innerHTML]="this.firstBlockButton" [ngClass]="{'primary': this.firstBlock, 'secondary': !this.firstBlock}"></a>
+            <a href="javascript:void(0)" (click)="makeSecondBlockFirst()" class="text-2xl" [innerHTML]="this.secondBlockButton" [ngClass]="{'primary': this.secondBlock, 'secondary': !this.secondBlock}"></a>
         </div>
     </div>
 </div>

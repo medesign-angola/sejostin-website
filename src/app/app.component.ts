@@ -66,6 +66,7 @@ export class AppComponent implements AfterViewInit{
   scrollTo(element: HTMLElement){
     // element.scrollIntoView();
     scrollTo(0, element.offsetTop - 90)
+    this.isMenuOpen = false;
     // console.log(element.offsetTop);
   }
 

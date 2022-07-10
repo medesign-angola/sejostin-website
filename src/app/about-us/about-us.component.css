@@ -151,3 +151,12 @@
 
 .values-right .description-content{}
 .values-right .description-content p{}
+
+
+.primary{
+    color: var(--secondary-color);
+}
+.secondary{
+    color: var(--secondary-color);
+    opacity: .2;
+}

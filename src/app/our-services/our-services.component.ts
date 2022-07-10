@@ -11,7 +11,7 @@ export class OurServicesComponent implements OnInit {
   secondBlock: boolean = false;
 
   firstBlockButton: string = '&#9679;';
-  secondBlockButton: string = '&#9675;';
+  secondBlockButton: string = '&#9679;';
 
   constructor() {
     this.firstBlock;
@@ -22,9 +22,6 @@ export class OurServicesComponent implements OnInit {
     if(this.firstBlock){
       this.firstBlock = !this.firstBlock;
       this.secondBlock = !this.secondBlock;
-
-      this.firstBlockButton = '&#9675;';
-      this.secondBlockButton = '&#9679;';
 
     }else{
 
@@ -37,8 +34,6 @@ export class OurServicesComponent implements OnInit {
       this.firstBlock = !this.firstBlock;
       this.secondBlock = !this.secondBlock;
 
-      this.firstBlockButton = '&#9679;';
-      this.secondBlockButton = '&#9675;';
 
     }else{
       

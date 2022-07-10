@@ -1,5 +1,5 @@
 <header>
-    <nav class="contain">
+    <nav class="contain sm:w-[90%] lg:w-[95%]">
       <div class="logotype">
         <a href="">
           <img src="assets/logo/logo.svg" class="hidden md:block" alt="">
@@ -20,7 +20,7 @@
             ">Quem Somos</a></li>
           <li><a (click)="scrollTo(services)" [ngClass]="
             {
-                'active' : this.currentSection == 3 
+                'active' : this.currentSection == 3
             }
             ">Nossos Serviços</a></li>
           <li><a (click)="scrollTo(message)" [ngClass]="
@@ -57,9 +57,22 @@
       </div>
       
       <div class="menu-mobile-hamburger lg:hidden flex flex-col" (click)="changeStatus()" [ngClass]="{'open': this.isMenuOpen == false, 'close': this.isMenuOpen == true}">
-        <span class="hamburger-top"></span>
-        <span class="hamburger-center"></span>
-        <span class="hamburger-bottom"></span>
+        <span class="hamburger-top">
+          <svg width="26" height="4" viewBox="0 0 26 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.4183 0.5H1.58167C0.846207 0.5 0.25 1.09621 0.25 1.83167V2.00167C0.25 2.73713 0.846207 3.33333 1.58167 3.33333H24.4183C25.1538 3.33333 25.75 2.73713 25.75 2.00167V1.83167C25.75 1.09621 25.1538 0.5 24.4183 0.5Z" fill="black"/>
+          </svg>
+        </span>
+        <span class="hamburger-center">
+          <svg width="26" height="4" viewBox="0 0 26 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.66667 3.41668C2.44907 3.41668 3.08333 2.78241 3.08333 2.00001C3.08333 1.21761 2.44907 0.583344 1.66667 0.583344C0.884263 0.583344 0.25 1.21761 0.25 2.00001C0.25 2.78241 0.884263 3.41668 1.66667 3.41668Z" fill="black"/>
+            <path d="M24.4183 0.583344H7.24834C6.51288 0.583344 5.91667 1.17955 5.91667 1.91501V2.08501C5.91667 2.82047 6.51288 3.41668 7.24834 3.41668H24.4183C25.1538 3.41668 25.75 2.82047 25.75 2.08501V1.91501C25.75 1.17955 25.1538 0.583344 24.4183 0.583344Z" fill="black"/>
+          </svg>
+        </span>
+        <span class="hamburger-bottom">
+          <svg width="26" height="4" viewBox="0 0 26 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.4183 0.666656H1.58167C0.846207 0.666656 0.25 1.26286 0.25 1.99832V2.16832C0.25 2.90378 0.846207 3.49999 1.58167 3.49999H24.4183C25.1538 3.49999 25.75 2.90378 25.75 2.16832V1.99832C25.75 1.26286 25.1538 0.666656 24.4183 0.666656Z" fill="black"/>
+          </svg>
+        </span>
       </div>
 
       <div class="contact-service-btn hidden lg:block">
@@ -85,7 +98,7 @@
     <app-ceo-message></app-ceo-message>
   </div>
 
-  <footer class="bg-primary py-3 w-[100%]">
+  <footer class="bg-primary pb-3 w-[100%]">
     <div class="contain flex sm:py-5 md:py-5 sm:flex-col md:flex-row md:justify-between">
       <div class="content-left flex sm:flex-col md:flex-row justify-center items-center md:m-0 sm:mt-0 sm:mb-10">
         <div class="brand sm:my-6 md:mr-5">
@@ -106,5 +119,5 @@
         </div>
       </div>
     </div>
-    <p class="text-center text-white sm:text-[12px] lg:text-[15px]">Sejostin - 2022 &copy; Todos os direitos reservados</p>
+    <p class="text-center text-white sm:text-[15px] lg:text-[15px]">Sejostin - 2022 &copy; Todos os direitos reservados</p>
   </footer>

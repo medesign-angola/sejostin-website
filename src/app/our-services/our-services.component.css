@@ -184,3 +184,11 @@
     font-weight: 700;
     color: #fff;
 }
+
+.primary{
+    color: var(--secondary-color);
+}
+.secondary{
+    color: var(--secondary-color);
+    opacity: .2;
+}
