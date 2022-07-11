@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="right-content flex items-center justify-center flex-col">
-        <div class="mission mb-5">
+        <div class="mission mb-10">
             <div class="mission-card bg-white flex p-8">
                 <div class="mission-left my-3">
                     <img src="assets/icones/mission.svg" width="60px" alt="">
@@ -75,8 +75,8 @@
             </div>
         </div>
         <div class="slide-controllers mt-2">
-            <a href="javascript:void(0)" (click)="makeVisionFirst()" class="text-secondary text-2xl" [innerHTML]="this.visionButton"></a>
-            <a href="javascript:void(0)" (click)="makeValueFirst()" class="text-secondary text-2xl" [innerHTML]="this.valuesButton"></a>
+            <a href="javascript:void(0)" (click)="makeVisionFirst()" class="text-2xl" [innerHTML]="this.visionButton" [ngClass]="{'primary': this.vision, 'secondary': !this.vision}"></a>
+            <a href="javascript:void(0)" (click)="makeValueFirst()" class="text-2xl" [innerHTML]="this.valuesButton" [ngClass]="{'primary': this.values, 'secondary': !this.values}"></a>
         </div>
     </div>
 </div>

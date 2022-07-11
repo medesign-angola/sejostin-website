@@ -13,8 +13,8 @@ export class OurServicesComponent implements OnInit {
   thirdBlock: boolean = false;
 
   firstBlockButton: string = '&#9679;';
-  secondBlockButton: string = '&#9675;';
-  thirdBlockButton: string = '&#9675;';
+  secondBlockButton: string = '&#9679;';
+  thirdBlockButton: string = '&#9679;';
 
   
   mainTitle: string = '';
@@ -30,6 +30,7 @@ export class OurServicesComponent implements OnInit {
   constructor(private ourServices: OurServicesService) {
     this.firstBlock;
     this.secondBlock;
+    this.thirdBlock;
 
     this.mainTitle = this.ourServices.mainTitle;
     this.contentParagraph = this.ourServices.contentParagraph;
@@ -42,10 +43,6 @@ export class OurServicesComponent implements OnInit {
       this.secondBlock = true;
       this.thirdBlock = false;
 
-      this.firstBlockButton = '&#9675;';
-      this.secondBlockButton = '&#9679;';
-      this.thirdBlockButton = '&#9675;';
-
   }
 
   makeFirstBlockFirst(){
@@ -54,29 +51,12 @@ export class OurServicesComponent implements OnInit {
       this.secondBlock = false;
       this.thirdBlock = false;
 
-      this.firstBlockButton = '&#9679;';
-      this.secondBlockButton = '&#9675;';
-      this.thirdBlockButton = '&#9675;';
-
   }
 
-  makeThirdBlockFirst(){
+  next(){}
+  prev(){}
 
-      this.firstBlock = false;
-      this.secondBlock = false;
-      this.thirdBlock = true;
-
-      this.firstBlockButton = '&#9675;';
-      this.secondBlockButton = '&#9675;';
-      this.thirdBlockButton = '&#9679;';
-
-  }
-
-  images_put(): void{
-
-    this.first_block_images.push(this.ourServices.servicesObject[0]);
-    this.first_block_images.push(this.ourServices.servicesObject[1]);
-
+  ngOnInit(): void {
     
     this.second_block_images.push(this.ourServices.servicesObject[2]);
     this.second_block_images.push(this.ourServices.servicesObject[3]);
@@ -102,10 +82,5 @@ export class OurServicesComponent implements OnInit {
   //   console.log(this.number_of_boxes);
 
   // }
-
-  ngOnInit(): void {
-    // this.checkServices();
-    this.images_put();
-  }
 
 }

@@ -12,7 +12,7 @@ export class AboutUsComponent implements OnInit {
   values: boolean = false;
 
   visionButton: string = '&#9679;';
-  valuesButton: string = '&#9675;';
+  valuesButton: string = '&#9679;';
 
   mainTitle: string = '';
   subTitle: string = '';
@@ -42,9 +42,6 @@ export class AboutUsComponent implements OnInit {
       this.vision = !this.vision;
       this.values = !this.values;
 
-      this.visionButton = '&#9675;';
-      this.valuesButton = '&#9679;';
-
       // Depois de 10 segundos, vai voltar na visão
 
       let timeOut = setTimeout(() => {
@@ -65,9 +62,6 @@ export class AboutUsComponent implements OnInit {
     if(this.values){
       this.vision = !this.vision;
       this.values = !this.values;
-
-      this.visionButton = '&#9679;';
-      this.valuesButton = '&#9675;';
 
     }else{
       
