@@ -5,11 +5,11 @@
         </div>
         <div class="content">
             <div class="main-title-content my-4">
-                <h1>Estamos na 4ª revolução industrial, uma nova era de disrupção Científica e tecnológica. </h1>
+                <h1>{{this.mainTitle}}</h1>
             </div>
             <div class="paragraph-content">
                 <p class="my-5">
-                    Distribuição de bens de consumo , transporte de mercadorias, estudo de viabilidade no ramo de agronegócio, formação em agronegócio e indústria e seguro agrícolas.
+                    {{this.contentParagraph}}
                 </p>
             </div>
         </div>
@@ -19,34 +19,34 @@
             <div class="firstBlock" [ngClass]="{'is-not-first' : !this.firstBlock}">
                 <div class="firstBlock-card flex">
                     <div class="firstBlock-images-container flex justify-around">
-                        <div class="box">
-                            <img src="assets/our-services/image1.jpg" alt="">
+                        <div class="box" *ngFor="let first_services of this.first_block_images">
+                            <img src="{{this.first_services.image_path}}" alt="">
                             <div class="description">
-                                <h2>Agricultura</h2>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <img src="assets/our-services/image2.jpg" alt="">
-                            <div class="description">
-                                <h2>Exportação de Café</h2>
+                                <h2>{{this.first_services.name}}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="secondBlock" [ngClass]="{'is-first' : this.secondBlock}">
+            <div class="secondBlock" [ngClass]="{'is-first' : this.secondBlock, 'is-not-first' : this.thirdBlock}">
                 <div class="secondBlock-card flex">
                     <div class="secondBlock-images-container flex justify-around">
-                        <div class="box">
-                            <img src="assets/our-services/image3.jpg" alt="">
+                        <div class="box" *ngFor="let second_services of this.second_block_images">
+                            <img src="{{this.second_services.image_path}}" alt="">
                             <div class="description">
-                                <h2>Exportação de Café</h2>
+                                <h2>{{this.second_services.name}}</h2>
                             </div>
                         </div>
-                        <div class="box">
-                            <img src="assets/our-services/image5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="thirdBlock" [ngClass]="{'is-first' : this.thirdBlock, 'is-not-first' : !this.thirdBlock}">
+                <div class="thirdBlock-card flex">
+                    <div class="thirdBlock-images-container flex justify-around">
+                        <div class="box" *ngFor="let third_services of this.third_block_images">
+                            <img src="{{this.third_services.image_path}}" alt="">
                             <div class="description">
-                                <h2>Exportação de Café</h2>
+                                <h2>{{this.third_services.name}}</h2>
                             </div>
                         </div>
                     </div>
@@ -56,6 +56,7 @@
         <div class="slide-controllers mt-2">
             <a href="javascript:void(0)" (click)="makeFirstBlockFirst()" class="text-secondary text-2xl" [innerHTML]="this.firstBlockButton"></a>
             <a href="javascript:void(0)" (click)="makeSecondBlockFirst()" class="text-secondary text-2xl" [innerHTML]="this.secondBlockButton"></a>
+            <a href="javascript:void(0)" (click)="makeThirdBlockFirst()" class="text-secondary text-2xl" [innerHTML]="this.thirdBlockButton"></a>
         </div>
     </div>
 </div>

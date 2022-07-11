@@ -184,3 +184,72 @@
     font-weight: 700;
     color: #fff;
 }
+
+
+.right-content .thirdBlock{
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 100%;
+    top: 0;
+    left: 110%;
+    height: 100%;
+    position: absolute;
+    transition: .6s;
+}
+
+.right-content .thirdBlock.is-first{
+    left: 0%;
+}
+.right-content .secondBlock.is-not-first{
+    left: -110%;
+}
+
+.right-content .thirdBlock .thirdBlock-card{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.right-content .thirdBlock .thirdBlock-card{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.thirdBlock-images-container{
+    position: relative;
+    height: 100%;
+}
+.thirdBlock-images-container div.box{
+    width: calc(380px - 70px);
+    height: calc(500px - 100px);
+    /* height: 100%; */
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+.thirdBlock-images-container div.box image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.thirdBlock-images-container div.box .description{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(40, 171, 227, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thirdBlock-images-container div.box .description h2{
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}

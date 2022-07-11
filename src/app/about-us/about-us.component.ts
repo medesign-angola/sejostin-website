@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { AboutContentService } from '../shared/service/about-content.service';
 
 @Component({
   selector: 'app-about-us',
@@ -13,9 +14,27 @@ export class AboutUsComponent implements OnInit {
   visionButton: string = '&#9679;';
   valuesButton: string = '&#9675;';
 
-  constructor() {
+  mainTitle: string = '';
+  subTitle: string = '';
+  firstParagraph: string = '';
+  secondParagraph: string = '';
+  missionContent: string = '';
+  visionContent: string = '';
+  valuesContent: string = '';
+
+
+  constructor(private aboutContentService: AboutContentService) {
     this.vision;
     this.values;
+
+    this.mainTitle = this.aboutContentService.mainTitle;
+    this.subTitle = this.aboutContentService.subTitle;
+    this.firstParagraph = this.aboutContentService.firstParagraph;
+    this.secondParagraph = this.aboutContentService.secondParagraph;
+    this.missionContent = this.aboutContentService.mission;
+    this.visionContent = this.aboutContentService.vision;
+    this.valuesContent = this.aboutContentService.values;
+
   }
 
   makeValueFirst(){

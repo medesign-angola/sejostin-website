@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OurServicesService } from '../shared/service/our-services.service';
 
 @Component({
   selector: 'app-our-services-mobile',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurServicesMobileComponent implements OnInit {
 
-  constructor() { }
+  mainTitle: string = '';
+  contentParagraph: string = '';
+  servicesObject: any = {};
+
+  constructor(private ourServices: OurServicesService) {
+    this.mainTitle = this.ourServices.mainTitle;
+    this.contentParagraph = this.ourServices.contentParagraph;
+    this.servicesObject = this.ourServices.servicesObject;
+  }
 
   ngOnInit(): void {
   }
