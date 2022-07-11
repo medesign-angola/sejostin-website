@@ -21,6 +21,9 @@ export class OurServicesComponent implements OnInit {
   contentParagraph: string = '';
   servicesObject: any = {};
 
+  isPossibleGoBack: boolean = false;
+  isPossibleGoForward: boolean = false;
+
   first_block_images: any = [];
   second_block_images: any = [];
   third_block_images: any = [];
@@ -39,29 +42,97 @@ export class OurServicesComponent implements OnInit {
 
   makeSecondBlockFirst(){
 
-      this.firstBlock = false;
-      this.secondBlock = true;
-      this.thirdBlock = false;
+    this.firstBlock = false;
+    this.secondBlock = true;
+    this.thirdBlock = false;
+
+    this.checkWhoIsActive();
 
   }
 
   makeFirstBlockFirst(){
 
-      this.firstBlock = true;
-      this.secondBlock = false;
-      this.thirdBlock = false;
+    this.firstBlock = true;
+    this.secondBlock = false;
+    this.thirdBlock = false;
+
+    this.checkWhoIsActive();
 
   }
 
-  next(){}
-  prev(){}
+  makeThirdBlockFirst(){
+
+    this.firstBlock = false;
+    this.secondBlock = false;
+    this.thirdBlock = true;
+    
+    this.checkWhoIsActive();
+
+  }
+
+  next(){
+    if(this.firstBlock){
+      this.secondBlock = true;
+      this.firstBlock = false;
+    
+      this.checkWhoIsActive();
+
+    }else if(this.secondBlock){
+      this.secondBlock = false;
+      this.thirdBlock = true;
+    
+      this.checkWhoIsActive();
+
+    }
+  }
+  prev(){
+    if(this.thirdBlock){
+      this.secondBlock = true;
+      this.thirdBlock = false;
+    
+      this.checkWhoIsActive();
+
+    }else if(this.secondBlock){
+      this.secondBlock = false;
+      this.firstBlock = true;
+    
+      this.checkWhoIsActive();
+
+    }
+  }
+
+  checkWhoIsActive(){
+    if(this.firstBlock){
+      this.isPossibleGoBack = false;
+      this.isPossibleGoForward = true;
+
+    }
+    if(this.secondBlock){
+      this.isPossibleGoBack = true;
+      this.isPossibleGoForward = true;
+
+    }
+    if(this.thirdBlock){
+      this.isPossibleGoBack = true;
+      this.isPossibleGoForward = false;
+
+    }
+
+  }
 
   ngOnInit(): void {
+
+    // console.log(this.isPossibleGoBack);
+    // console.log(this.isPossibleGoForward);
+    
+    this.checkWhoIsActive();
+
+    this.first_block_images.push(this.ourServices.servicesObject[0]);
+    this.first_block_images.push(this.ourServices.servicesObject[1]);
     
     this.second_block_images.push(this.ourServices.servicesObject[2]);
     this.second_block_images.push(this.ourServices.servicesObject[3]);
 
-    
     this.third_block_images.push(this.ourServices.servicesObject[4]);
 
     // console.log(this.first_block_images);

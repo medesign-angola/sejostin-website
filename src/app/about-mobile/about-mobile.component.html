@@ -20,49 +20,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-    <div class="scroller contain-boxes overflow-x-auto" #scroller>
-        <div class="flex items-center pl-3 justify-between flex-row w-[1000px]">
-            <div class="mission" #mission>
-                <div class="mission-card bg-white flex p-8">
-                    <div class="mission-right">
-                        <div class="description-title my-2">
-                            <h4>Missão</h4>
-                        </div>
-                        <div class="description-content">
-                            <p>
-                                {{this.missionContent}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="vision" #vision>
-                <div class="vision-card bg-white flex p-8"> 
-                    <div class="vision-right">
-                        <div class="description-title my-2">
-                            <h4>Visão</h4>
-                        </div>
-                        <div class="description-content">
-                            <p>
-                                {{this.visionContent}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="values" #values>
-                <div class="values-card bg-white flex p-8">
-                    <div class="values-right">
-                        <div class="description-title my-2">
-                            <h4>Valores</h4>
-                        </div>
-                        <div class="description-content">
-                            <p>
-                                {{this.valuesContent}}
-                            </p>
-                        </div>
-=======
 </div>
 
 <div class="scroller contain-boxes overflow-x-auto bg-orange-0 p-0 mb-5 h-50" #scroller>
@@ -75,8 +32,7 @@
                     </div>
                     <div class="description-content">
                         <p>
-                            Contribuir para um país mais forte por meio da transformação
-                             do conhecimento em Riqueza para as pessoas.
+                            {{this.missionContent}}
                         </p>
                     </div>
                 </div>
@@ -90,7 +46,7 @@
                     </div>
                     <div class="description-content">
                         <p>
-                            Ser a maior e melhor empresa no ramo do agronegócio, oferecendo aos seus clientes e parceiros uma relação duradoura, com foco no crescimento, rentabilidade e responsabilidade socioambiental.
+                            {{this.visionContent}}
                         </p>
                     </div>
                 </div>
@@ -104,15 +60,16 @@
                     </div>
                     <div class="description-content">
                         <p>
-                            Inovação, Liderança, Responsabilidade, Integridade, Paixão, Colaboração, Diversidade, Qualidade.
+                            {{this.valuesContent}}
                         </p>
->>>>>>> b75b8d95800d4d22e901afd58a3abb185cc47564
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 <div class="slide-controllers mt-0 text-center">
     <a href="javascript:void(0)" (click)="this.scrollTo(mission)" class="text-2xl" [innerHTML]="this.missionButton" [ngClass]="{'primary': this.isMissionActive, 'secondary': !this.isMissionActive}"></a>
     <a href="javascript:void(0)" (click)="this.scrollTo(vision)" class="text-2xl" [innerHTML]="this.visionButton" [ngClass]="{'primary': this.isVisionActive, 'secondary': !this.isVisionActive}"></a>
