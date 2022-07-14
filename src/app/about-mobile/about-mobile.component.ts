@@ -25,8 +25,8 @@ export class AboutMobileComponent implements OnInit, AfterViewInit {
   isVisionActive: boolean = false;
   isValuesActive: boolean = false;
 
-  public missionOffset: number = 26 - 28;
-  public visionOffset: number = 401 - 28;
+  public missionOffset: number = 26 - 26;
+  public visionOffset: number = 401 - 26;
   public valuesOffset: number = 775 - 40;
   
   // public missionOffset: number = this.mission.nativeElement.offsetLeft;
