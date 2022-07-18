@@ -83,6 +83,11 @@ export class OurServicesComponent implements OnInit {
     
       this.checkWhoIsActive();
 
+    }else if(this.thirdBlock){
+      this.firstBlock = true;
+      this.thirdBlock = false;
+
+      this.checkWhoIsActive();
     }
   }
   prev(){
@@ -98,12 +103,17 @@ export class OurServicesComponent implements OnInit {
     
       this.checkWhoIsActive();
 
+    }else if(this.firstBlock){
+      this.thirdBlock = true;
+      this.firstBlock = false;
+
+      this.checkWhoIsActive();
     }
   }
 
   checkWhoIsActive(){
     if(this.firstBlock){
-      this.isPossibleGoBack = false;
+      this.isPossibleGoBack = true;
       this.isPossibleGoForward = true;
 
     }
@@ -114,7 +124,7 @@ export class OurServicesComponent implements OnInit {
     }
     if(this.thirdBlock){
       this.isPossibleGoBack = true;
-      this.isPossibleGoForward = false;
+      this.isPossibleGoForward = true;
 
     }
 

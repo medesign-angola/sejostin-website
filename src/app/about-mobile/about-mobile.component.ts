@@ -56,38 +56,34 @@ export class AboutMobileComponent implements OnInit, AfterViewInit {
     
   }
 
+  checkWhoIsActive(){
+    let perMinuteCheck = setInterval(() => {
+      this.conditionsChangeActive();
+    }, 500);
+    // console.log("te");
+  }
+
   @HostListener('touchmove', ['$event']) checkTouchMoveLeft(){
     
     // console.log(this.scroller.nativeElement.scrollLeft);
 
-    
-    let scroller = this.scroller.nativeElement.scrollLeft;
+    // this.conditionsChangeActive();
 
-    if(scroller >= this.missionOffset && scroller < this.visionOffset){
-      this.isMissionActive = true;
-      this.isVisionActive = false;
-      this.isValuesActive = false;
-
-    }else if(scroller >= this.visionOffset && scroller < this.valuesOffset){
-      this.isMissionActive = false;
-      this.isVisionActive = true;
-      this.isValuesActive = false;
-
-
-    }else if(scroller >= this.valuesOffset){
-      this.isMissionActive = false;
-      this.isVisionActive = false;
-      this.isValuesActive = true;
-
-    }
+    this.checkWhoIsActive();
 
   }
+
 
   @HostListener('wheel', ['$event']) checkOffsetLeft(){
     
     // console.log(this.scroller.nativeElement.scrollLeft);
 
-    
+    this.conditionsChangeActive();
+
+  }
+
+  
+  conditionsChangeActive(){
     let scroller = this.scroller.nativeElement.scrollLeft;
 
     if(scroller >= this.missionOffset && scroller < this.visionOffset){
@@ -107,7 +103,6 @@ export class AboutMobileComponent implements OnInit, AfterViewInit {
       this.isValuesActive = true;
 
     }
-
   }
 
   scrollTo(element: HTMLElement){
