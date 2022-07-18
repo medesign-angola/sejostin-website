@@ -50,7 +50,7 @@ export class AboutUsComponent implements OnInit {
 
         clearTimeout(timeOut);
 
-      }, 10000);
+      }, 5000);
 
     }else{
 
@@ -69,7 +69,18 @@ export class AboutUsComponent implements OnInit {
 
   }
 
+  setIntervalForSliding(){
+    let intervalForSliding = setInterval(() => {
+
+      // this.makeValueFirst
+      this.vision = !this.vision;
+      this.values = !this.values;
+
+    }, 5000);
+  }
+
   ngOnInit(): void {
+    this.setIntervalForSliding();
   }
 
 }
