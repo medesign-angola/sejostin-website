@@ -1,1 +1,47 @@
-<p>contact-us works!</p>
+<div class="contain flex justify-between lg:flex-row sm:w-[90%] sm:my-10 sm:mx-auto lg:w-[95%] lg:mx-auto lg:mt-[0px] lg:py-20 lg:mb-[0px]">
+    <div class="left-form bg-red-0 sm:pl-0 sm:w-full lg:w-auto lg:pl-20">
+        <div class="title my-2">
+            <h1 class="sm:text-[28px] sm:text-center lg:text-left lg:text-[49px]">Nossos contactos</h1>
+        </div>
+        <div class="contact-details">
+            <div class="phone flex flex-row sm:justify-center lg:justify-start items-center my-5">
+                <img src="assets/icones/contact-phone.svg" width="25" class="mr-4" alt="">
+                <div class="text-primary sm:text-center md:text-left">
+                  <p class="sm:text-[14px]"><strong>Telefone: </strong> 931 96 41 04 | 923 82 68 68</p>
+                </div>
+            </div>
+            <div class="email flex flex-row items-center sm:justify-center lg:justify-start">
+                <img src="assets/icones/contact-email.svg" width="25" class="mr-4"  alt="">
+                <div class="text-primary sm:text-center md:text-left">
+                  <p><strong>E-mail: </strong> geral@sejostin.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form my-10">
+
+            <form [formGroup]="this.form" action="" class="block">
+                <div class="input">
+                    <input type="text" name="" [ngClass]="{'invalid': (this.isNameInvalid && this.form.get('nome').touched) || this.isNameInvalid}" (keyup)="isNameInvalidFunction()" placeholder="Nome Completo..." formControlName="nome" id="">
+                </div>
+                <div class="input">
+                    <input type="text" name="" [ngClass]="{'invalid': (this.isSubjectInvalid && this.form.get('assunto').touched) || this.isSubjectInvalid}" (keyup)="isSubjectInvalidFunction()" placeholder="Assunto..." formControlName="assunto" formControlName="assunto" id="">
+                </div>
+                <div class="input">
+                    <input type="email" name="" [ngClass]="{'invalid': (this.isEmailInvalid && this.form.get('email').touched) || this.isEmailInvalid}" (keyup)="isEmailInvalidFunction()" placeholder="Email..." formControlName="email" id="">
+                </div>
+                <div class="input">
+                    <textarea name="" id="" [ngClass]="{'invalid': (this.isMessageInvalid && this.form.get('mensagem').touched) || this.isMessageInvalid}" (keyup)="isMessageInvalidFunction()" placeholder="Mensagem..." formControlName="mensagem"></textarea>
+                </div>
+                <div class="input btn">
+                    <button type="submit" (click)="send_email()">Enviar email</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="right-image p-5 bg-orange-0 sm:hidden lg:block">
+        <img src="assets/contact-us/image1.jpg" class="w-full h-full object-cover rounded-[10px]" alt="">
+    </div>
+</div>

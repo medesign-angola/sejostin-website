@@ -11,6 +11,7 @@ export class AppComponent implements AfterViewInit{
   @ViewChild('about') about!: ElementRef
   @ViewChild('services') services!: ElementRef
   @ViewChild('message') message!: ElementRef
+  @ViewChild('contact') contact!: ElementRef
 
   currentSection: Number = 1;
 
@@ -18,6 +19,7 @@ export class AppComponent implements AfterViewInit{
   public aboutOffset: number = 965;
   public servicesOffset: number = 1516;
   public messageOffset: number = 2034;
+  public contactOffset: number = 2778;
 
 
   // Menu
@@ -36,6 +38,7 @@ export class AppComponent implements AfterViewInit{
     this.aboutOffset = this.aboutOffset - 90;
     this.servicesOffset = this.servicesOffset - 90;
     this.messageOffset = this.messageOffset - 90;
+    this.contactOffset = this.contactOffset - 90;
 
   }
 
@@ -55,8 +58,10 @@ export class AppComponent implements AfterViewInit{
       this.currentSection = 2;
     }else if(window.pageYOffset >= this.servicesOffset && window.pageYOffset < this.messageOffset){
       this.currentSection = 3;
-    }else if(window.pageYOffset >= this.messageOffset){
+    }else if(window.pageYOffset >= this.messageOffset && window.pageYOffset < this.contactOffset){
       this.currentSection = 4;
+    }else if(window.pageYOffset >= this.contactOffset){
+      this.currentSection = 5;
     }else{
       this.currentSection = 1;
     }

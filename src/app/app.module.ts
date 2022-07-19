@@ -12,6 +12,7 @@ import { BannerMobileComponent } from './banner-mobile/banner-mobile.component';
 import { AboutMobileComponent } from './about-mobile/about-mobile.component';
 import { OurServicesMobileComponent } from './our-services-mobile/our-services-mobile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

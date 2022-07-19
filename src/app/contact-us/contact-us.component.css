@@ -1,0 +1,54 @@
+.contain{
+    max-width: 1440px;
+    position: relative;
+}
+
+.contain .left-form .title{}
+.contain .left-form .title h1{
+    font-weight: 700;
+}
+
+.contact-form{
+    /* background-color: green; */
+    position: relative;
+}
+.contact-form form{}
+
+.contact-form form > div{
+    margin: 10px 0px;
+}
+.contact-form form > div input,
+.contact-form form > div textarea,
+.contact-form form > div button{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    font-size: 14px;
+    transition: .6s;
+}
+.contact-form form > div input:focus,
+.contact-form form > div textarea:focus,
+.contact-form form > div button:focus{
+    outline: none;
+}
+.contact-form form > div input.invalid,
+.contact-form form > div textarea.invalid{
+    border-color: #f33;
+}
+.contact-form form > div input.invalid::placeholder,
+.contact-form form > div textarea.invalid::placeholder{
+    color: #f33;
+}
+.contact-form form > div input{
+    border-radius: 5px;
+}
+.contact-form form > div textarea{
+    border-radius: 10px;
+    height: 157px;
+    resize: none;
+}
+.contact-form form > div button{
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+}

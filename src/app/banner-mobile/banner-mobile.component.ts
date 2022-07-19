@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BannerContentService } from '../shared/service/banner-content.service';
 
 @Component({
@@ -14,7 +14,20 @@ export class BannerMobileComponent implements OnInit {
   subtitle: string = this.contentService.getBannerSubtitle();
   content: string = this.contentService.getBannerContent();
 
+  // @Output() wasContactClicked: boolean = false;
+  @Output() wasContactClicked = new EventEmitter<boolean>();
+
   ngOnInit(): void {
+  }
+
+  mobileContactClicked(){
+
+    this.wasContactClicked.emit(true);
+
+    let timeOutToRestart = setTimeout(() => {
+      this.wasContactClicked.emit(false);
+    }, 2000);
+
   }
 
 }

@@ -76,14 +76,14 @@
       </div>
 
       <div class="contact-service-btn hidden lg:block">
-        <a href="#">Contactar Serviços</a>
+        <a href="javascript:void(0)" (click)="scrollTo(contact)">Contactar Serviços</a>
       </div>
     </nav>
   </header>
 
   <div #banner class="bg-orange-0 banner">
     <app-banner-section class="sm:hidden lg:block"></app-banner-section>
-    <app-banner-mobile class="sm:block lg:hidden"></app-banner-mobile>
+    <app-banner-mobile (wasContactClicked)="scrollTo(contact)" class="sm:block lg:hidden"></app-banner-mobile>
     <app-second-section></app-second-section>
   </div>
   <div #about class="bg-orange-0 py-5 about">
@@ -98,15 +98,15 @@
     <app-ceo-message></app-ceo-message>
   </div>
 
+  <div #contact class="bg-orange-0 py-0 contact-us">
+    <app-contact-us></app-contact-us>
+  </div>
+
   <footer class="bg-primary pb-3 w-[100%]">
     <div class="contain flex sm:py-5 md:py-5 sm:flex-col md:flex-row md:justify-between">
       <div class="content-left flex sm:flex-col md:flex-row justify-center items-center md:m-0 sm:mt-0 sm:mb-10">
         <div class="brand sm:my-6 md:mr-5">
           <img src="assets/logo/white-brand.svg" alt="">
-        </div>
-        <div class="text-white sm:text-center md:text-left font-light">
-          <p class="sm:text-[14px]"><strong>Telefone: </strong> 931 96 41 04 | 923 82 68 68</p>
-          <p><strong>E-mail: </strong> geral@sejostin.com</p>
         </div>
       </div>
       <div class="content-right flex sm:flex-col md:flex-row justify-center items-center md:pr-5">
