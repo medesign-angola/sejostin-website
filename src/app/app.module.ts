@@ -11,6 +11,7 @@ import { CeoMessageComponent } from './ceo-message/ceo-message.component';
 import { BannerMobileComponent } from './banner-mobile/banner-mobile.component';
 import { AboutMobileComponent } from './about-mobile/about-mobile.component';
 import { OurServicesMobileComponent } from './our-services-mobile/our-services-mobile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OurServicesMobileComponent } from './our-services-mobile/our-services-m
     CeoMessageComponent,
     BannerMobileComponent,
     AboutMobileComponent,
-    OurServicesMobileComponent
+    OurServicesMobileComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
