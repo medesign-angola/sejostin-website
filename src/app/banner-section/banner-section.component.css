@@ -1,10 +1,10 @@
 :root{
     --primary-image-slide-width: 550px;
     --secondaries-image-slide-width: 53px;
-    --margin-left-second-image: calc(var(--primary-image-slide-width) + 10px);
-    --margin-left-third-image: calc(var(--margin-left-second-image) + var(--secondaries-image-slide-width) + 7px);
-    --margin-left-fourth-image: calc(var(--margin-left-third-image) + var(--secondaries-image-slide-width) + 7px);
-    --margin-left-fifth-image: calc(var(--margin-left-fourth-image) + var(--secondaries-image-slide-width) + 7px);
+    --margin-left-second-image: calc(var(--primary-image-slide-width) + 9px);
+    --margin-left-third-image: calc(var(--margin-left-second-image) + var(--secondaries-image-slide-width) + 5px);
+    --margin-left-fourth-image: calc(var(--margin-left-third-image) + var(--secondaries-image-slide-width) + 5px);
+    --margin-left-fifth-image: calc(var(--margin-left-fourth-image) + var(--secondaries-image-slide-width) + 5px);
    
    
     --images-container-width-one-images: calc(var(--margin-left-second-image) + 7px);
@@ -140,8 +140,8 @@
 
 .container .right .images div.im > img{
     /* margin-left: 10px; */
-    width: var(--primary-image-slide-width) !important;
-    /* width: 100%; */
+    /* width: var(--primary-image-slide-width) !important; */
+    width: 100%;
     height: 100%;
     object-fit: cover !important;
     box-sizing: border-box;
@@ -162,12 +162,18 @@
 .container .right .images.five .im-first{
     animation: transitionFiveImages 1s ease-in;
 }
-
 .im-first{
     width: var(--primary-image-slide-width) !important;
     /* transition: all 1.5s ease-in-out; */
     /* background-color: red; */
     position: relative;
+}
+.container .right .images.five .im-first.start{
+    /* width: var(--secondaries-image-slide-width) !important; */
+}
+
+.container .right .images.five .im-first.expanded{
+    width: var(--primary-image-slide-width) !important;
 }
 
 @keyframes transitionOneImage {

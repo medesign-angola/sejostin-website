@@ -14,20 +14,15 @@
             </div>
         </div>
     </div>
-    <div class="right-content flex items-center justify-center flex-col">
-        <div class="left-arrow absolute left-0 m-0 flex items-center justify-center" [ngClass]="{'show-btn': this.isPossibleGoBack, 'hide-btn': !this.isPossibleGoBack}">
-            <button class="prev" (click)="prev()"><img src="assets/setas/left.svg" width="60%" alt=""></button>
+    <div class="right-content flex items-center w-[100%] justify-center flex-col">
+        <div class="left-arrow absolute left-0 bg-fuchsia-0 m-0 flex items-center justify-center" [ngClass]="{'show-btn': this.isPossibleGoBack, 'hide-btn': !this.isPossibleGoBack}">
+            <button class="prev" (click)="prev()"><img src="assets/setas/left.svg" alt=""></button>
         </div>
-
-        <div class="right-arrow absolute -right-3 m-0 flex items-center justify-center" [ngClass]="{'show-btn': this.isPossibleGoForward, 'hide-btn': !this.isPossibleGoForward}">
-            <button class="next" (click)="next()"><img src="assets/setas/right.svg" width="60%" alt=""></button>
-        </div>
-
         
         <div class="description-slide">
             <div class="firstBlock" [ngClass]="{'is-not-first' : !this.firstBlock}">
-                <div class="firstBlock-card flex">
-                    <div class="firstBlock-images-container flex justify-around">
+                <div class="firstBlock-card">
+                    <div class="firstBlock-images-container flex justify-between">
                         <div class="box" *ngFor="let first_services of this.first_block_images">
                             <img src="{{this.first_services.image_path}}" alt="">
                             <div class="description">
@@ -63,8 +58,12 @@
             </div>
         </div>
         
+        
+        <div class="right-arrow absolute right-0 bg-fuchsia-0 m-0 flex items-center justify-center" [ngClass]="{'show-btn': this.isPossibleGoForward, 'hide-btn': !this.isPossibleGoForward}">
+            <button class="next" (click)="next()"><img src="assets/setas/right.svg" alt=""></button>
+        </div>
 
-        <div class="slide-controllers mt-2">
+        <div class="slide-controllers mt-2 bg-green-0">
             <a href="javascript:void(0)" (click)="makeFirstBlockFirst()" class="text-2xl" [innerHTML]="this.firstBlockButton" [ngClass]="{'primary': this.firstBlock, 'secondary': !this.firstBlock}"></a>
             <a href="javascript:void(0)" (click)="makeSecondBlockFirst()" class="text-2xl" [innerHTML]="this.secondBlockButton" [ngClass]="{'primary': this.secondBlock, 'secondary': !this.secondBlock}"></a>
             <a href="javascript:void(0)" (click)="makeThirdBlockFirst()" class="text-2xl" [innerHTML]="this.thirdBlockButton" [ngClass]="{'primary': this.thirdBlock, 'secondary': !this.thirdBlock}"></a>

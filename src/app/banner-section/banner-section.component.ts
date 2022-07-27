@@ -19,6 +19,8 @@ export class BannerSectionComponent implements OnInit {
   imageObject: any = {};
   arrayOfImages: any[] = [];
 
+  isExpanded: boolean = false;
+
   image1: string = `<img src="assets/banner-images/test/image1.jpg" alt="">`;
   image2: string = `<img src="assets/banner-images/test/image2.jpg" alt="">`;
   image3: string = `<img src="assets/banner-images/test/image3.jpg" alt="">`;
